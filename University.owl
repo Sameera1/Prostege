@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#"
+     xml:base="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#hasTaught -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#hasTaught">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#hasTaught"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#Modules"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#hasTaught"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#LectureHalls"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#teachBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#teachBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#teachBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#Modules"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#teachBy"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#Lecturers"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#Departments -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#Departments">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#appliedScienceFaculty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#LectureHalls -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#LectureHalls">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#appliedScienceFaculty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#Lecturers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#Lecturers">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#appliedScienceFaculty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#Modules -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#Modules">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#appliedScienceFaculty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#ProbationaryLecturers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#ProbationaryLecturers">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#Lecturers"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#SeniorLecGrade1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#SeniorLecGrade1">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#SeniorLecturers"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#SeniorLecGrade2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#SeniorLecGrade2">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#SeniorLecturers"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#SeniorLecturers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#SeniorLecturers">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#Lecturers"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#TemporaryLecturers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#TemporaryLecturers">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#Lecturers"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#UnconfirmedLecturers -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#UnconfirmedLecturers">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#Lecturers"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#appliedScienceFaculty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#appliedScienceFaculty"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#geomaticsFaculty -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#geomaticsFaculty"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#CISLab -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#CISLab"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#NLH -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#NLH"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#WHHalls -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#WHHalls"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#Z9 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#Z9">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/pizzaExample#appliedScienceFaculty"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
