@@ -1,0 +1,519 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#"
+     xml:base="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#IsBaseOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#IsBaseOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#hasIngredientOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#IsToppingOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#IsToppingOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#hasIngredientOf"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#hasTopping"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#PizzaBase"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Pizza"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#hasBase -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#hasBase">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#hasIngredient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#hasIngredient -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#hasIngredient"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#hasIngredientOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#hasIngredientOf"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#hasTopping -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#hasTopping">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#hasIngredient"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Pizza"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#PizzaBase"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#AmericanHotPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#AmericanHotPizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#NamedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Mozaralla"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Pepper"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Pepperoni"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Tomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Mozaralla"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Pepper"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Pepperoni"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Tomato"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#AmericanPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#AmericanPizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#NamedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Mozaralla"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Pepperoni"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Tomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Mozaralla"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Pepperoni"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Tomato"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Anchovy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Anchovy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#SeaFood"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Caper -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Caper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Vegetables"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Cheese -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Cheese">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#CheesyPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#CheesyPizza">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Pizza"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#hasTopping"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Cheese"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Pizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Cheese"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#DeepPanBase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#DeepPanBase">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#PizzaBase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Ham -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Ham">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Meat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#MargaritaPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#MargaritaPizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#NamedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Mozaralla"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Tomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Mozaralla"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Tomato"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Meat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Meat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Mozaralla -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Mozaralla">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Cheese"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Mushrooms -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Mushrooms">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Vegetables"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#NamedPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#NamedPizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Pizza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Olive -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Olive">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Vegetables"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Onion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Onion">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Vegetables"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Parmesam -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Parmesam">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Cheese"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Pepper -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Pepper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Vegetables"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Pepperoni -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Pepperoni">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Meat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Pizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Pizza"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#PizzaBase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#PizzaBase"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#PizzaTopping -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#PizzaTopping">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Pizza"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#hasTopping"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Cheese"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Vegetables"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Cheese"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Vegetables"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Prawn -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Prawn">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#SeaFood"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Salami -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Salami">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Meat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#SeaFood -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#SeaFood">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#SohoPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#SohoPizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#NamedPizza"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Mozaralla"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Olive"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Parmesam"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#hasTopping"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Tomato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#hasTopping"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Mozaralla"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Olive"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Parmesam"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Tomato"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#SpicyBeef -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#SpicyBeef">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Meat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#ThinAndCrispyBase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#ThinAndCrispyBase">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#PizzaBase"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Tomato -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Tomato">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Vegetables"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Tuna -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Tuna">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#SeaFood"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Vegetables -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Vegetables">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#PizzaTopping"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#VegetarianPizza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#VegetarianPizza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2021/7/untitled-ontology-9#Pizza"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
